@@ -1,0 +1,57 @@
+server:
+  port: ${APP_PORT:8080}
+
+spring:
+  application:
+    name: collab-system
+
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:collab}
+    username: ${POSTGRES_USER:app}
+    password: ${POSTGRES_PASSWORD:secret}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+
+  data:
+    mongodb:
+      uri: mongodb://${MONGO_HOST:localhost}:${MONGO_PORT:27017}/${MONGO_DB:collab}
+
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWORD:}
+
+  messaging:
+    redis:
+      enabled: true
+
+# JWT Configuration
+jwt:
+  secret: ${JWT_SECRET:mySecretKeyForJwtTokenGenerationMustBeAtLeast256BitsLong}
+  expiration: 86400000
+
+# WebSocket Configuration
+websocket:
+  allowed-origins: "*"
+  heartbeat-interval: 10000
+
+# Application Configuration
+app:
+  snapshot:
+    interval-minutes: 5
+    max-pending-events: 100
+
+# Logging
+logging:
+  level:
+    root: INFO
+    com.example: DEBUG
+    org.springframework.web.socket: DEBUG
