@@ -1,0 +1,5 @@
+把plan的内容输出到doc文档中
+
+---
+
+生成git commit msg 分类别进行提交
