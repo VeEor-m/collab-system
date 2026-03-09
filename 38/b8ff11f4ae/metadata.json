@@ -1,0 +1,42 @@
+{
+  "cli_version": "0.5.0",
+  "checkpoint_id": "38b8ff11f4ae",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 1,
+  "files_touched": [
+    "frontend/index.html",
+    "frontend/nginx.conf",
+    "frontend/package.json",
+    "frontend/src/App.tsx",
+    "frontend/src/collab/useYjsDoc.ts",
+    "frontend/src/components/Editor.css",
+    "frontend/src/components/Editor.tsx",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/DocumentList.tsx",
+    "frontend/src/pages/EditorPage.tsx",
+    "frontend/src/pages/Login.tsx",
+    "frontend/src/services/api.ts",
+    "frontend/src/store/authStore.ts",
+    "frontend/src/vite-env.d.ts",
+    "frontend/tsconfig.json",
+    "frontend/tsconfig.node.json",
+    "frontend/vite.config.ts"
+  ],
+  "sessions": [
+    {
+      "metadata": "/38/b8ff11f4ae/0/metadata.json",
+      "transcript": "/38/b8ff11f4ae/0/full.jsonl",
+      "content_hash": "/38/b8ff11f4ae/0/content_hash.txt",
+      "prompt": "/38/b8ff11f4ae/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 1439586,
+    "cache_creation_tokens": 1855,
+    "cache_read_tokens": 1203243,
+    "output_tokens": 21507,
+    "api_call_count": 65
+  }
+}
